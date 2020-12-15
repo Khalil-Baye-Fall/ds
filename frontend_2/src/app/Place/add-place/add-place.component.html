@@ -1,0 +1,34 @@
+<div class="login-page">
+    <h1 class="title">Add informations about the place...<i class="fab fa-artstation"></i></h1>
+    <span id="seperate"></span>
+    <section id="about">
+        <div class="about-left-col">
+            <form class="example-form" (ngSubmit)="PlaceAdd()">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Place's name</mat-label>
+                    <input matInput placeholder="Place's name" class="form-control" name="name" [value]="name" [(ngModel)]="model.name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Latitude</mat-label>
+                    <input matInput placeholder="Latitude" [value]="latitude" class="form-control" name="latitude" [(ngModel)]="model.latitude">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Longitude</mat-label>
+                    <input matInput placeholder="Longitude" [value]="longitude" class="form-control" name="longitude" [(ngModel)]="model.longitude">
+                </mat-form-field>
+                <button class="btn btn-outline-success" typpe="submit" style="margin-top: 30px;">Add Place</button>
+                <button class="btn btn-outline-secondary" style="float: right; margin-top: 30px;" routerLink="/list-place">List of places!</button>
+                <p class="text-success">{{ successMessage }}</p>
+                <p class="text-danger">{{ errorMessage }}</p>
+                <p class="text-danger"> {{ alertMessage }} </p>
+            </form>
+
+        </div>
+
+        <div class="about-right-col">
+            <app-map [manyTags]="false" [mapType]='"addplace"' (markerChange)="setFromMap($event)"></app-map>
+        </div>
+    </section>
+
+
+</div>

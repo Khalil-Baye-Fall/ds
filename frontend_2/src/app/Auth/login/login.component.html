@@ -1,0 +1,80 @@
+<div class="login-page">
+    <h1 class="title">Welcome In Your ChildCare <i class="fab fa-buffer"></i></h1>
+    <span id="seperate"></span>
+    <mat-card class="mat-elevation-z12">
+
+        <mat-card-title style="text-align:center;">SignIn <i class="fab fa-asymmetrik"></i> SignUp</mat-card-title>
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+            <mat-tab label="Sign In">
+                <mat-card-content>
+                    <form (ngSubmit)="Login()">
+                        <mat-form-field>
+                            <input matInput placeholder="login" required name="login" [(ngModel)]="model.login">
+                            <mat-error>login is required</mat-error>
+                            <mat-icon matSuffix>login</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Password" type="password" required name="password" [(ngModel)]="model.password">
+
+                            <mat-icon matSuffix>lock</mat-icon>
+                        </mat-form-field>
+                        <p style="color: green;">
+                            {{ successMessage }}
+                        </p>
+                        <p style="color: red;">
+                            {{ errorMessage }}
+                        </p>
+
+
+                        <button mat-raised-button color="primary" class="login-button" type="submit">
+                        Sign In
+                      </button>
+                    </form>
+
+                    <!-- Register part  -->
+
+                </mat-card-content>
+            </mat-tab>
+
+            <mat-tab label="Sign Up">
+                <mat-card-content>
+                    <form (ngSubmit)="LogUp()">
+                        <mat-form-field>
+                            <input matInput placeholder="Name" required name="name" [(ngModel)]="model.name">
+                            <mat-icon matSuffix>perm_identity</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Surname" required name="surname" [(ngModel)]="model.surname">
+
+                            <mat-icon matSuffix>perm_identity</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="login" required name="login" [(ngModel)]="model.login">
+                            <mat-error>login is required</mat-error>
+                            <mat-icon matSuffix>login</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="email" required name="email" [(ngModel)]="model.email">
+                            <mat-error>Email is only for notification</mat-error>
+                            <mat-icon matSuffix>email</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Password" type="password" name="password" [(ngModel)]="model.password">
+                            <mat-icon matSuffix>lock</mat-icon>
+                        </mat-form-field>
+                        <p style="color: green;">
+                            {{ successMessage }}
+                        </p>
+                        <p style="color: red;">
+                            {{ errorMessage }}
+                        </p>
+
+                        <button mat-raised-button color="primary" class="login-button" type="submit">
+              Sign Up
+            </button>
+                    </form>
+                </mat-card-content>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+</div>

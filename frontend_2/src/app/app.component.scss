@@ -1,0 +1,77 @@
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+.bg-dark {
+    background-color: #4f868c!important;
+}
+
+.name {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 30px;
+}
+
+.links a {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.links a:hover {
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+.another_option a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.another_option a:hover {
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+.btn {
+    color: rgb(49, 126, 72);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.btn:hover {
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+.langue {
+    color: white;
+    font-size: 0.8em;
+    padding: 3px;
+    margin-top: 17px;
+    margin-left: 26px;
+    margin-right: 35px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(16, 187, 116);
+}
+
+// ------------------------------------
+.head {
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 5%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}

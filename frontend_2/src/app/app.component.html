@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand name"><i class="fab fa-accusoft"></i>ChildC@re</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto links">
+                <li class="nav-item active">
+                    <a class="nav-link " routerLink="/home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" routerLink="/func">
+                  Services
+                </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contanct</a>
+                </li>
+
+            </ul>
+            <div class="other-option">
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-warning" *ngIf='!authService.loggedIn()' routerLink="login"> Sign in <i class="fas fa-sign-in-alt"></i></button>
+                    <button class="btn btn-info" style="cursor: pointer;" *ngIf='authService.loggedIn()' (click)="authService.SignOut()"> Sign out <i class="fas fa-sign-out-alt"></i></button>
+
+                    <h4 type="button" class="langue">en</h4>
+
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <router-outlet></router-outlet>
+</body>
+
+</html>

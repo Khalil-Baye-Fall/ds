@@ -1,0 +1,63 @@
+<div class="head">
+    <h1 class="title">Child Details...<i class="fab fa-artstation"></i></h1>
+    <span id="seperate"></span>
+    <button class="btn btn-outline-warning back" routerLink="/list-child">
+  <p ><strong> List Child</strong></p>
+ </button>
+</div>
+<div class="detail-child">
+    <section id="about">
+        <div class=" about-left-col">
+            <mat-card>
+                <div class="personal-details">
+                    <h1><strong> <u>Personal detail :</u> </strong></h1>
+                    <h3><strong>Child's Name : </strong> {{child_name}} </h3>
+                    <h3><strong>Child's ID : </strong> {{child_id}} </h3>
+                </div>
+                <hr>
+                <hr>
+                <div class="position-rule">
+                    <h1> <strong> <u> Postion Rules :</u></strong></h1>
+                    <div class="container" *ngFor="let position of positionRules">
+
+
+                        <h3> <strong>Place's name : {{ position.place.name }} </strong> </h3>
+                        <h3> <strong>Latitude :  {{ position.place.latitude }} </strong></h3>
+                        <h3> <strong>Longitude : {{ position.place.longitude }} </strong> </h3>
+
+                        <h3> <strong>Start Time :   {{ position.from_datetime }} </strong> </h3>
+                        <h3> <strong>End Time :   {{ position.to_datetime }}</strong> </h3>
+
+                        <hr *ngIf="positionRules.length > 1">
+
+                    </div>
+                </div>
+
+                <hr>
+                <div class="position-device">
+                    <h1> <strong> <u> Device Positions :</u></strong> </h1>
+                    <div class="container" *ngFor="let device of devicePositions">
+
+                        <h3> <strong>Time :</strong> </h3>
+                        <h4> {{device.datetime}}</h4>
+                        <h3> <strong>Latitude :</strong> </h3>
+                        <h4> {{device.latitude}}</h4>
+                        <h3> <strong>Longitude :</strong> </h3>
+                        <h4> {{device.longitude}}</h4>
+
+                        <hr>
+                    </div>
+                </div>
+
+            </mat-card>
+        </div>
+        <div class="about-right-col" *ngIf="devicePositions">
+            <app-map [manyTags]="false" [mapType]='"addplace"' [readOnly]="true" [markers]="devicePositions"></app-map>
+
+        </div>
+    </section>
+
+
+
+
+</div>

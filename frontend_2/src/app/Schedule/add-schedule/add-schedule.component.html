@@ -1,0 +1,37 @@
+<div class="login-page">
+    <div class="container">
+        <h1 class="title">Add a New Schedule...<i class="fab fa-artstation"></i></h1>
+        <span id="seperate"></span>
+        <div *ngIf='places && places.length > 0'>
+
+            <form class="example-form" (ngSubmit)="scheduleAdded()">
+                <button mat-button [matMenuTriggerFor]="menu">Wybierz miejsce</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item *ngFor="let place of places" (click)="setPlace(place.id)"> {{place.name}}</button>
+                </mat-menu>
+                <!-- <mat-form-field  class="example-full-width">
+            <input matInput type="text" class="form-control" placeholder="Place's name"  name="place.deviceId" [(ngModel)]="model.deviceId">
+          </mat-form-field>  -->
+                <mat-form-field class="example-full-width">
+                    <input matInput type="datetime-local" class="form-control" placeholder="start datetime" name="from_datetime" [(ngModel)]="model.from_datetime">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput type="datetime-local" class="form-control" placeholder="end datetime" name="to_datetime" [(ngModel)]="model.to_datetime">
+                </mat-form-field>
+
+
+                <button class="btn btn-success" typpe="submit">Add Schedule</button>
+                <p class="text-danger">{{ errorMessage }}</p>
+                <p class="text-success">{{ successMessage }}</p>
+            </form>
+        </div>
+    </div>
+    <div *ngIf='!places || places.length == 0' style="text-align: center; font-size: 2em;
+font-weight: bold; font-style: italic;">
+        <p>Oups there are no place added!</p>
+        <p>Please, go head and add a new place.</p>
+        <p>You must add one!</p>
+        <button class="btn btn-outline-warning back" routerLink="/place">
+    <p ><strong> Add Place </strong></p>
+   </button>
+    </div>

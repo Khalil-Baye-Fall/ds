@@ -1,0 +1,104 @@
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+    /* Half height */
+    height: 93.5%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+// -------------------------------about us
+.about {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 270px;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 90px;
+    // margin-bottom: 10px;
+}
+
+.title:hover {
+    color: chocolate;
+}
+
+#seperate {
+    width: 150px;
+    height: 5px;
+    margin: 15px auto;
+    display: block;
+    background: #b6aa09;
+}
+
+// ---------------------------- Get touch
+#contact {
+    // background: #efefef;
+    margin-left: 530px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    // padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.title2 {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 90px;
+    // margin-bottom: 10px;
+}
+
+.title2:hover {
+    color: chocolate;
+}
+
+.contact-form {
+    padding: 5px;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+::placeholder {
+    color: #999 !important;
+}
+
+.follow {
+    background: #fff;
+    padding: 10px;
+    margin: 15px;
+}
+
+.follow i {
+    margin-left: 5px;
+    padding: 4px;
+}
+
+.contact-info .fa {
+    margin-left: 10px;
+    color: #007bff;
+    font-weight: bold;
+}

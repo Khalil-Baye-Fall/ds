@@ -1,0 +1,34 @@
+<div class="login-page">
+    <h1 class="title">List of Place...<i class="fab fa-artstation"></i></h1>
+    <span id="seperate"></span>
+
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let place of listPlacesWithId">
+
+            <div class="box-element product">
+                <h1><strong>Place's Name : </strong> {{place.name}} </h1>
+                <h1><strong>Latitude : </strong> {{place.latitude}} </h1>
+                <h1><strong>Longitude : </strong> {{place.longitude}} </h1>
+                <br>
+                <br>
+                <hr>
+                <div class="container all-options">
+                    <!-- <button class="btn btn-outline-info" (click)="addSchedule(child._id)" style="margin-right: 20px;">Update</button><br> -->
+                    <button class="btn btn-outline-danger delete" (click)="deletePlace(place.id);">Delete</button>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div *ngIf='!listPlacesWithId || listPlacesWithId.length == 0' style="text-align: center; font-size: 2em;
+font-weight: bold; font-style: italic;">
+        <p>Oups there are no place added!</p>
+        <p>Please, go head and add a new place.</p>
+        <button class="btn btn-outline-warning back" routerLink="/place">
+          <p ><strong> Add Place </strong></p>
+         </button>
+    </div>

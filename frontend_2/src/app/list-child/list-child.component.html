@@ -1,0 +1,78 @@
+<div class="list-child">
+    <!-- <h2 class="info">Welcome, for a visualization of the names of your children that you have added, please click on the button.</h2> -->
+    <!-- <button class="btn btn-outline-success" (click)="getChildAdded()">GET MY CHILD!</button> -->
+    <h1 class="title">List of Child(s)...<i class="fab fa-artstation"></i></h1>
+    <span id="seperate"></span>
+
+    <div class="row">
+        <div class="col-lg-6" *ngFor="let child of childsWithId">
+
+            <div class="box-element product">
+                <h1><strong>Child's Name : </strong> {{child.name}} </h1>
+                <h1><strong>Child's ID : </strong> {{child._id}} </h1>
+                <br>
+                <br>
+                <hr>
+                <div class="container all-options">
+                    <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)" style="margin-right: 20px;">More Info2</button> -->
+                    <!-- <button class="btn btn-outline-info" (click)="open(content); getMoreInformation(child._id)" style="margin-right: 20px;">More Info</button><br> -->
+                    <!-- <button class="btn btn-outline-info open" (click)="getMoreInformation(child._id)" style="margin-right: 20px;">MORE INFO</button> -->
+                    <button class="btn btn-outline-info" (click)="addSchedule(child._id)" style="margin-right: 20px;">Add schedule for Me!</button><br>
+                    <button class="btn btn-outline-danger" (click)="deleteChild(child._id);">Delete</button>
+                    <button class="btn btn-outline-warning" [routerLink]="[child._id]" style="margin-left: 20px;">Details</button>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">More information about your child!</h4>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <mat-card *ngFor="let rule of positionRules">
+                    <h3> <u> <strong> Child detail:</strong> </u></h3>
+                    <p>Child's name : {{ child_name }}</p>
+                    <p>Number id : {{ rule._id }}</p>
+                    <hr>
+                    <h3> <u> <strong> Position rule:</strong> </u></h3>
+                    <div>
+                        <p> Place : {{ rule.place ? rule.place.name: ''}}</p>
+                        <p> Start Time : {{ rule.from_datetime }} </p>
+                        <p> End Time : {{ rule.to_datetime }} </p>
+
+                    </div>
+                    <hr>
+                    <h3> <u> <strong>Position Device :</strong> </u> </h3>
+                    <!-- <div class="container" >
+                    *ngIf="devicePositions.length > 0"
+                    <app-map [readOnly]=true [mapType]='"getrealplaces" + rule._id' [longitude]="rule.place.longitude" [latitude]="rule.place.latitude" [markers]="devicePositions"></app-map>
+                </div> -->
+                </mat-card>
+            </div>
+
+        </ng-template>
+
+
+
+    </div>
+    <div *ngIf='!childsWithId || childsWithId.length == 0' style="text-align: center; font-size: 2em;
+font-weight: bold; font-style: italic;">
+        <p>Oups there are no child added! </p>
+        <p>Please, go head and add a new child.</p>
+        <button class="btn btn-outline-warning back" routerLink="/child">
+          <p ><strong> Add Child</strong></p>
+         </button>
+    </div>

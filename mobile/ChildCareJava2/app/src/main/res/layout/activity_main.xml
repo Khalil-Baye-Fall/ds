@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:id="@+id/main_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/title_label"
+        android:textAllCaps="true"
+        android:textSize="65sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/appCodeHeader_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appCodeHeader_label"
+        app:layout_constraintBottom_toTopOf="@+id/appCode_text"
+        app:layout_constraintTop_toBottomOf="@+id/title_text"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/appCode_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/appCode_label"
+        android:textAllCaps="true"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/notification_text"
+        app:layout_constraintTop_toBottomOf="@+id/title_text"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/notification_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_label"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/timerHeader_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/timerHeader_label" />
+
+            <TextView
+                android:id="@+id/timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/time_passed_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/latitudeHeader_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/latitudeHeader_label" />
+
+            <TextView
+                android:id="@+id/latitude_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:text="@string/latitude_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/longitudeHeader_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/longitudeHeader_label" />
+
+            <TextView
+                android:id="@+id/longitude_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:text="@string/longitude_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pairingHeader_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pairingHeader_label" />
+
+            <TextView
+                android:id="@+id/pairing_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:text="@string/pairing_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pairingDeviceHeader_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pairingDeviceHeader_label" />
+
+            <TextView
+                android:id="@+id/pairingDevice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:text="@string/pairingDevice_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

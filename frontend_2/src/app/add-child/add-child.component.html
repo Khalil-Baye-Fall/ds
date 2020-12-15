@@ -1,0 +1,23 @@
+<div class="login-page">
+    <div class="container">
+        <h1 class="title">Add informations about your child...<i class="fab fa-artstation"></i></h1>
+        <span id="seperate"></span>
+        <form class="example-form" (ngSubmit)="ChildAdded()">
+            <mat-form-field class="example-full-width">
+                <mat-label>Child's Name</mat-label>
+                <input matInput placeholder="Child's name" class="form-control" name="name" [(ngModel)]="model.name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>App ID</mat-label>
+                <input matInput placeholder="App ID" class="form-control" name="id" [(ngModel)]="model.connectionToken">
+            </mat-form-field>
+            <div class="container options">
+                <button class="btn btn-outline-success" typpe="submit">Add child</button>
+                <button class="btn btn-outline-secondary" routerLink="/list-child">List Child</button>
+            </div>
+
+            <p class="text-success">{{ successMessage }}</p>
+            <p class="text-danger">{{ errorMessage }}</p>
+        </form>
+    </div>
+</div>

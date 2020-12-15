@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ChildCareJava</string>
+    <string name="latitude_label">latitude text</string>
+    <string name="longitude_label">longitude text</string>
+    <string name="no_location_detected">no location detected</string>
+    <string name="permission_rationale">Please allow in-app location data</string>
+    <string name="permission_denied_explanation">U have not allowed for Location Data usage in this app</string>
+    <string name="settings">Settings</string>
+    <string name="title_label">Child Care</string>
+    <string name="appCodeHeader_label">Kod twojego urządzenia to</string>
+    <string name="appCode_label">23A7Q8Z</string>
+    <string name="notification_label">Notyfikacje</string>
+    <string name="timerHeader_label">Czas do aktualizacji</string>
+    <string name="latitudeHeader_label">Szerokość geograficzna</string>
+    <string name="longitudeHeader_label">Długość geograficzna</string>
+    <string name="time_passed_label">_</string>
+    <string name="pairingHeader_label">GET /pairing</string>
+    <string name="pairingDeviceHeader_label">GET /device/pairing/:token</string>
+    <string name="pairing_label">not received</string>
+    <string name="pairingDevice_label">not received</string>
+
+</resources>
